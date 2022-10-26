@@ -3,7 +3,7 @@
 }
 
 .rightbarWrapper {
-  padding: 20px;
+  padding: 20px 20px 0 0;
 }
 
 .birthdayContainer {
@@ -76,7 +76,7 @@
 }
 
 .rightbarFollowingImg {
-  width: 110px;
+  width: 100px;
   height: 100px;
   object-fit: cover;
   border-radius: 5px;
@@ -99,9 +99,4 @@
 
 .rightbarFollowButton:focus {
   outline: none;
-}
-
-.rightbarFriendList {
-  padding: 0;
-  
 }
