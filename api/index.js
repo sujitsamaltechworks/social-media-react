@@ -14,10 +14,14 @@ const postRoute = require("./routes/posts");
 
 dotenv.config();
 
-mongoose.connect(process.env.MONGO_URL, { useNewUrlParser: true }, (err) => {
-  if (err) console.log(err);
-  else console.log("Connected to MongoDB");
-});
+mongoose.connect(
+  "mongodb+srv://sujit1997samal:Mogo%401998@clustersocial.zm5ozem.mongodb.net/?retryWrites=true&w=majority",
+  { useNewUrlParser: true },
+  (err) => {
+    if (err) console.log(err);
+    else console.log("Connected to MongoDB");
+  }
+);
 
 app.use("/images", express.static(path.join(__dirname, "public/images")));
 
@@ -49,6 +53,6 @@ app.use("/api/auth", authRoute);
 app.use("/api/users", userRoute);
 app.use("/api/posts", postRoute);
 
-app.listen(8800, () => {
+app.listen(process.env.PORT || 8800, () => {
   console.log("backend server is running");
 });
