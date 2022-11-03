@@ -15,7 +15,7 @@ const postRoute = require("./routes/posts");
 dotenv.config();
 
 mongoose.connect(
-  "mongodb+srv://sujit1997samal:Mogo%401998@clustersocial.zm5ozem.mongodb.net/?retryWrites=true&w=majority",
+  process.env.MONGO_URL,
   { useNewUrlParser: true },
   (err) => {
     if (err) console.log(err);
